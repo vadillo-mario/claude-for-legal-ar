@@ -66,3 +66,7 @@ Pull requests bienvenidos. Las guías de estilo doctrinal y redacción están en
 ---
 
 **Autor:** Mario Vadillo · [mariovadillo.com.ar](https://mariovadillo.com.ar) · Abogado, especialista en derecho del consumidor, Mendoza, Argentina.
+
+
+## Test: Validación de flujo end-to-end
+Este PR valida que el flujo de integración de Claude funciona correctamente.
