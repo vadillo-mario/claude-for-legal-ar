@@ -1,0 +1,25 @@
+{
+  "name": "claude-for-legal-ar",
+  "version": "0.1.0",
+  "description": "Plugins de Claude Code para la práctica jurídica en Argentina — defensa del consumidor, derecho administrativo provincial, y conectores a fuentes legales argentinas (Infoleg, SAIJ, BORA, BO Mendoza, CIJur, SCJM).",
+  "owner": {
+    "name": "Mario Vadillo",
+    "url": "https://mariovadillo.com.ar",
+    "email": "contacto@mariovadillo.com.ar"
+  },
+  "license": "Apache-2.0",
+  "plugins": [
+    {
+      "name": "derecho-consumidor",
+      "path": "./derecho-consumidor",
+      "description": "Defensa del consumidor (LDC 24.240, CCyCN, normativa BCRA, ENRE, ENARGAS, ANAC). Revisión de cláusulas abusivas, intimaciones, daño punitivo, COPREC, reclamos en servicios públicos.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "derecho-admin-mendoza",
+      "path": "./derecho-admin-mendoza",
+      "description": "Derecho administrativo provincial Mendoza — amparos colectivos (art. 43 CN, art. 17 Const. Mza.), impugnación de actos administrativos, dictámenes sobre licitaciones, análisis de decretos provinciales.",
+      "version": "0.0.1-alpha"
+    }
+  ]
+}

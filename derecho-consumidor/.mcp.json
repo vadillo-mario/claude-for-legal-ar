@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "saij": {
+      "command": "uvx",
+      "args": ["saij-mcp"],
+      "description": "Sistema Argentino de Información Jurídica — legislación nacional y provincial, jurisprudencia, doctrina. Provisto por hernan-cc/saij-mcp."
+    },
+    "ar-legal-sources": {
+      "command": "python",
+      "args": ["-m", "ar_legal_sources.server"],
+      "description": "Fuentes legales argentinas — Infoleg (legislación nacional vigente), BORA (Boletín Oficial Nación), BO Mendoza. Servidor propio de claude-for-legal-ar."
+    }
+  }
+}

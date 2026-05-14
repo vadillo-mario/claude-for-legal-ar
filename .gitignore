@@ -1,0 +1,38 @@
+# Credenciales y secretos — nunca commitear
+.env
+.env.local
+*.secrets
+config/credentials.json
+scripts/wordpress-credentials.json
+
+# Contenido ingestado (regenerable, no debe commitearse)
+*/references/vadillo-guias-content.md
+*/references/vadillo-mdz-content.md
+scripts/cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+dist/
+build/
+
+# Node
+node_modules/
+package-lock.json
+yarn.lock
+
+# Editores
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Claude Code
+.claude/cache/
+.claude/sessions/

@@ -1,0 +1,18 @@
+{
+  "name": "derecho-consumidor",
+  "version": "0.1.0",
+  "description": "Defensa del consumidor en Argentina — LDC 24.240, CCyCN arts. 1092-1122 y 988, normativa BCRA, ENRE, ENARGAS, ANAC, BCRA. Revisión de cláusulas abusivas, intimaciones a empresas y entes administrativos, escritos de daño punitivo, denuncias COPREC, reclamos en servicios públicos, planes de ahorro, créditos prendarios.",
+  "author": "Mario Vadillo <contacto@mariovadillo.com.ar>",
+  "homepage": "https://mariovadillo.com.ar",
+  "license": "Apache-2.0",
+  "keywords": [
+    "consumidor",
+    "ldc",
+    "ccycn",
+    "argentina",
+    "derecho-del-consumidor",
+    "dano-punitivo",
+    "coprec",
+    "servicios-publicos"
+  ]
+}

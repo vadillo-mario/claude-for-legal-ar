@@ -1,0 +1,17 @@
+{
+  "name": "derecho-admin-mendoza",
+  "version": "0.0.1-alpha",
+  "description": "Derecho administrativo provincial Mendoza — amparo colectivo (art. 43 CN, art. 17 Const. Mza.), impugnación de actos administrativos, análisis de decretos provinciales, dictámenes sobre licitaciones, intervenciones ante entes (ATM, EPRE, DGI Irrigación). ESQUELETO — skills en desarrollo.",
+  "author": "Mario Vadillo <contacto@mariovadillo.com.ar>",
+  "homepage": "https://mariovadillo.com.ar",
+  "license": "Apache-2.0",
+  "keywords": [
+    "derecho-administrativo",
+    "mendoza",
+    "amparo",
+    "decretos-provinciales",
+    "atm",
+    "epre",
+    "irrigacion"
+  ]
+}
