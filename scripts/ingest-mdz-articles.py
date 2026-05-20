@@ -53,7 +53,7 @@ BASE_URL = "https://www.mdzol.com"
 SECCION_URL = "https://www.mdzol.com/consumidores"
 USER_AGENT = (
     "Mozilla/5.0 (compatible; claude-for-legal-ar-ingest/0.1.0; "
-    "https://github.com/MNVadillo/claude-for-legal-ar) - autor del contenido recuperando sus propios artículos"
+    "https://github.com/MNVadillo/claude-for-legal-ar) - autor del contenido recuperando sus propios articulos"
 )
 TIMEOUT = 30.0
 PAUSA_ENTRE_REQUESTS_SEG = 1.0
