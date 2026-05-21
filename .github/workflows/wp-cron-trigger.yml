@@ -1,0 +1,44 @@
+name: Trigger wp-cron — mariovadillo.com.ar
+
+# Reemplaza el wp-cron roto del hosting.
+# GitHub Actions hace ping cada 15 min a wp-cron.php para que los backups
+# del snippet "MV Seguridad+Backup" y cualquier wp_schedule_event se ejecuten.
+# Sin costo. Sin login. Sin que Mario tenga que hacer nada.
+
+on:
+  schedule:
+    # GitHub crons corren cada 15 min en cualquier zona horaria — UTC fijo
+    - cron: '*/15 * * * *'
+  workflow_dispatch: # permite disparar manualmente desde la pestaña Actions
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Ping wp-cron.php
+        run: |
+          TS=$(date +%s)
+          URL="https://mariovadillo.com.ar/wp-cron.php?doing_wp_cron=${TS}"
+          echo "Pingeando: $URL"
+          # -fsSL: silent, fail on error, follow redirects
+          # -m 60: timeout 60s
+          # -w: print HTTP code y duración al final
+          curl -fsSL -m 60 \
+            -A "GitHub-Actions wp-cron pinger (mariovadillo.com.ar)" \
+            -o /dev/null \
+            -w "HTTP: %{http_code} | Tiempo: %{time_total}s | URL final: %{url_effective}\n" \
+            "$URL"
+
+      - name: Verificar health del sitio
+        run: |
+          # Check secundario: que la home siga respondiendo 200
+          CODE=$(curl -s -o /dev/null -w "%{http_code}" -m 30 "https://mariovadillo.com.ar/")
+          echo "Home HTTP: $CODE"
+          if [ "$CODE" != "200" ]; then
+            echo "::warning::Home respondió HTTP $CODE — el sitio puede estar caído"
+            exit 1
+          fi
